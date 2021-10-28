@@ -1,41 +1,44 @@
-# OryKratosClient::V0alpha1Api
+# OryKratosClient::V0alpha2Api
 
 All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**admin_create_identity**](V0alpha1Api.md#admin_create_identity) | **POST** /identities | Create an Identity |
-| [**admin_create_self_service_recovery_link**](V0alpha1Api.md#admin_create_self_service_recovery_link) | **POST** /recovery/link | Create a Recovery Link |
-| [**admin_delete_identity**](V0alpha1Api.md#admin_delete_identity) | **DELETE** /identities/{id} | Delete an Identity |
-| [**admin_get_identity**](V0alpha1Api.md#admin_get_identity) | **GET** /identities/{id} | Get an Identity |
-| [**admin_list_identities**](V0alpha1Api.md#admin_list_identities) | **GET** /identities | List Identities |
-| [**admin_update_identity**](V0alpha1Api.md#admin_update_identity) | **PUT** /identities/{id} | Update an Identity |
-| [**create_self_service_logout_flow_url_for_browsers**](V0alpha1Api.md#create_self_service_logout_flow_url_for_browsers) | **GET** /self-service/logout/browser | Create a Logout URL for Browsers |
-| [**get_json_schema**](V0alpha1Api.md#get_json_schema) | **GET** /schemas/{id} |  |
-| [**get_self_service_error**](V0alpha1Api.md#get_self_service_error) | **GET** /self-service/errors | Get Self-Service Errors |
-| [**get_self_service_login_flow**](V0alpha1Api.md#get_self_service_login_flow) | **GET** /self-service/login/flows | Get Login Flow |
-| [**get_self_service_recovery_flow**](V0alpha1Api.md#get_self_service_recovery_flow) | **GET** /self-service/recovery/flows | Get Recovery Flow |
-| [**get_self_service_registration_flow**](V0alpha1Api.md#get_self_service_registration_flow) | **GET** /self-service/registration/flows | Get Registration Flow |
-| [**get_self_service_settings_flow**](V0alpha1Api.md#get_self_service_settings_flow) | **GET** /self-service/settings/flows | Get Settings Flow |
-| [**get_self_service_verification_flow**](V0alpha1Api.md#get_self_service_verification_flow) | **GET** /self-service/verification/flows | Get Verification Flow |
-| [**initialize_self_service_login_flow_for_browsers**](V0alpha1Api.md#initialize_self_service_login_flow_for_browsers) | **GET** /self-service/login/browser | Initialize Login Flow for Browsers |
-| [**initialize_self_service_login_flow_without_browser**](V0alpha1Api.md#initialize_self_service_login_flow_without_browser) | **GET** /self-service/login/api | Initialize Login Flow for APIs, Services, Apps, ... |
-| [**initialize_self_service_recovery_flow_for_browsers**](V0alpha1Api.md#initialize_self_service_recovery_flow_for_browsers) | **GET** /self-service/recovery/browser | Initialize Recovery Flow for Browsers |
-| [**initialize_self_service_recovery_flow_without_browser**](V0alpha1Api.md#initialize_self_service_recovery_flow_without_browser) | **GET** /self-service/recovery/api | Initialize Recovery Flow for APIs, Services, Apps, ... |
-| [**initialize_self_service_registration_flow_for_browsers**](V0alpha1Api.md#initialize_self_service_registration_flow_for_browsers) | **GET** /self-service/registration/browser | Initialize Registration Flow for Browsers |
-| [**initialize_self_service_registration_flow_without_browser**](V0alpha1Api.md#initialize_self_service_registration_flow_without_browser) | **GET** /self-service/registration/api | Initialize Registration Flow for APIs, Services, Apps, ... |
-| [**initialize_self_service_settings_flow_for_browsers**](V0alpha1Api.md#initialize_self_service_settings_flow_for_browsers) | **GET** /self-service/settings/browser | Initialize Settings Flow for Browsers |
-| [**initialize_self_service_settings_flow_without_browser**](V0alpha1Api.md#initialize_self_service_settings_flow_without_browser) | **GET** /self-service/settings/api | Initialize Settings Flow for APIs, Services, Apps, ... |
-| [**initialize_self_service_verification_flow_for_browsers**](V0alpha1Api.md#initialize_self_service_verification_flow_for_browsers) | **GET** /self-service/verification/browser | Initialize Verification Flow for Browser Clients |
-| [**initialize_self_service_verification_flow_without_browser**](V0alpha1Api.md#initialize_self_service_verification_flow_without_browser) | **GET** /self-service/verification/api | Initialize Verification Flow for APIs, Services, Apps, ... |
-| [**submit_self_service_login_flow**](V0alpha1Api.md#submit_self_service_login_flow) | **POST** /self-service/login | Submit a Login Flow |
-| [**submit_self_service_logout_flow**](V0alpha1Api.md#submit_self_service_logout_flow) | **GET** /self-service/logout | Complete Self-Service Logout |
-| [**submit_self_service_logout_flow_without_browser**](V0alpha1Api.md#submit_self_service_logout_flow_without_browser) | **DELETE** /self-service/logout/api | Perform Logout for APIs, Services, Apps, ... |
-| [**submit_self_service_recovery_flow**](V0alpha1Api.md#submit_self_service_recovery_flow) | **POST** /self-service/recovery | Complete Recovery Flow |
-| [**submit_self_service_registration_flow**](V0alpha1Api.md#submit_self_service_registration_flow) | **POST** /self-service/registration | Submit a Registration Flow |
-| [**submit_self_service_settings_flow**](V0alpha1Api.md#submit_self_service_settings_flow) | **POST** /self-service/settings | Complete Settings Flow |
-| [**submit_self_service_verification_flow**](V0alpha1Api.md#submit_self_service_verification_flow) | **POST** /self-service/verification | Complete Verification Flow |
-| [**to_session**](V0alpha1Api.md#to_session) | **GET** /sessions/whoami | Check Who the Current HTTP Session Belongs To |
+| [**admin_create_identity**](V0alpha2Api.md#admin_create_identity) | **POST** /identities | Create an Identity |
+| [**admin_create_self_service_recovery_link**](V0alpha2Api.md#admin_create_self_service_recovery_link) | **POST** /recovery/link | Create a Recovery Link |
+| [**admin_delete_identity**](V0alpha2Api.md#admin_delete_identity) | **DELETE** /identities/{id} | Delete an Identity |
+| [**admin_delete_identity_sessions**](V0alpha2Api.md#admin_delete_identity_sessions) | **DELETE** /identities/{id}/sessions | Calling this endpoint irrecoverably and permanently deletes and invalidates all sessions that belong to the given Identity. |
+| [**admin_get_identity**](V0alpha2Api.md#admin_get_identity) | **GET** /identities/{id} | Get an Identity |
+| [**admin_list_identities**](V0alpha2Api.md#admin_list_identities) | **GET** /identities | List Identities |
+| [**admin_update_identity**](V0alpha2Api.md#admin_update_identity) | **PUT** /identities/{id} | Update an Identity |
+| [**create_self_service_logout_flow_url_for_browsers**](V0alpha2Api.md#create_self_service_logout_flow_url_for_browsers) | **GET** /self-service/logout/browser | Create a Logout URL for Browsers |
+| [**get_json_schema**](V0alpha2Api.md#get_json_schema) | **GET** /schemas/{id} |  |
+| [**get_self_service_error**](V0alpha2Api.md#get_self_service_error) | **GET** /self-service/errors | Get Self-Service Errors |
+| [**get_self_service_login_flow**](V0alpha2Api.md#get_self_service_login_flow) | **GET** /self-service/login/flows | Get Login Flow |
+| [**get_self_service_recovery_flow**](V0alpha2Api.md#get_self_service_recovery_flow) | **GET** /self-service/recovery/flows | Get Recovery Flow |
+| [**get_self_service_registration_flow**](V0alpha2Api.md#get_self_service_registration_flow) | **GET** /self-service/registration/flows | Get Registration Flow |
+| [**get_self_service_settings_flow**](V0alpha2Api.md#get_self_service_settings_flow) | **GET** /self-service/settings/flows | Get Settings Flow |
+| [**get_self_service_verification_flow**](V0alpha2Api.md#get_self_service_verification_flow) | **GET** /self-service/verification/flows | Get Verification Flow |
+| [**get_web_authn_java_script**](V0alpha2Api.md#get_web_authn_java_script) | **GET** /.well-known/ory/webauthn.js | Get WebAuthn JavaScript |
+| [**initialize_self_service_login_flow_for_browsers**](V0alpha2Api.md#initialize_self_service_login_flow_for_browsers) | **GET** /self-service/login/browser | Initialize Login Flow for Browsers |
+| [**initialize_self_service_login_flow_without_browser**](V0alpha2Api.md#initialize_self_service_login_flow_without_browser) | **GET** /self-service/login/api | Initialize Login Flow for APIs, Services, Apps, ... |
+| [**initialize_self_service_recovery_flow_for_browsers**](V0alpha2Api.md#initialize_self_service_recovery_flow_for_browsers) | **GET** /self-service/recovery/browser | Initialize Recovery Flow for Browsers |
+| [**initialize_self_service_recovery_flow_without_browser**](V0alpha2Api.md#initialize_self_service_recovery_flow_without_browser) | **GET** /self-service/recovery/api | Initialize Recovery Flow for APIs, Services, Apps, ... |
+| [**initialize_self_service_registration_flow_for_browsers**](V0alpha2Api.md#initialize_self_service_registration_flow_for_browsers) | **GET** /self-service/registration/browser | Initialize Registration Flow for Browsers |
+| [**initialize_self_service_registration_flow_without_browser**](V0alpha2Api.md#initialize_self_service_registration_flow_without_browser) | **GET** /self-service/registration/api | Initialize Registration Flow for APIs, Services, Apps, ... |
+| [**initialize_self_service_settings_flow_for_browsers**](V0alpha2Api.md#initialize_self_service_settings_flow_for_browsers) | **GET** /self-service/settings/browser | Initialize Settings Flow for Browsers |
+| [**initialize_self_service_settings_flow_without_browser**](V0alpha2Api.md#initialize_self_service_settings_flow_without_browser) | **GET** /self-service/settings/api | Initialize Settings Flow for APIs, Services, Apps, ... |
+| [**initialize_self_service_verification_flow_for_browsers**](V0alpha2Api.md#initialize_self_service_verification_flow_for_browsers) | **GET** /self-service/verification/browser | Initialize Verification Flow for Browser Clients |
+| [**initialize_self_service_verification_flow_without_browser**](V0alpha2Api.md#initialize_self_service_verification_flow_without_browser) | **GET** /self-service/verification/api | Initialize Verification Flow for APIs, Services, Apps, ... |
+| [**list_identity_schemas**](V0alpha2Api.md#list_identity_schemas) | **GET** /schemas |  |
+| [**submit_self_service_login_flow**](V0alpha2Api.md#submit_self_service_login_flow) | **POST** /self-service/login | Submit a Login Flow |
+| [**submit_self_service_logout_flow**](V0alpha2Api.md#submit_self_service_logout_flow) | **GET** /self-service/logout | Complete Self-Service Logout |
+| [**submit_self_service_logout_flow_without_browser**](V0alpha2Api.md#submit_self_service_logout_flow_without_browser) | **DELETE** /self-service/logout/api | Perform Logout for APIs, Services, Apps, ... |
+| [**submit_self_service_recovery_flow**](V0alpha2Api.md#submit_self_service_recovery_flow) | **POST** /self-service/recovery | Complete Recovery Flow |
+| [**submit_self_service_registration_flow**](V0alpha2Api.md#submit_self_service_registration_flow) | **POST** /self-service/registration | Submit a Registration Flow |
+| [**submit_self_service_settings_flow**](V0alpha2Api.md#submit_self_service_settings_flow) | **POST** /self-service/settings | Complete Settings Flow |
+| [**submit_self_service_verification_flow**](V0alpha2Api.md#submit_self_service_verification_flow) | **POST** /self-service/verification | Complete Verification Flow |
+| [**to_session**](V0alpha2Api.md#to_session) | **GET** /sessions/whoami | Check Who the Current HTTP Session Belongs To |
 
 
 ## admin_create_identity
@@ -59,7 +62,7 @@ OryKratosClient.configure do |config|
   # config.api_key_prefix['oryAccessToken'] = 'Bearer'
 end
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
   admin_create_identity_body: OryKratosClient::AdminCreateIdentityBody.new({schema_id: 'schema_id_example', traits: 3.56}) # AdminCreateIdentityBody | 
 }
@@ -69,7 +72,7 @@ begin
   result = api_instance.admin_create_identity(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_create_identity: #{e}"
+  puts "Error when calling V0alpha2Api->admin_create_identity: #{e}"
 end
 ```
 
@@ -87,7 +90,7 @@ begin
   p headers # => { ... }
   p data # => <Identity>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_create_identity_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->admin_create_identity_with_http_info: #{e}"
 end
 ```
 
@@ -125,7 +128,7 @@ This endpoint creates a recovery link which should be given to the user in order
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
   admin_create_self_service_recovery_link_body: OryKratosClient::AdminCreateSelfServiceRecoveryLinkBody.new({identity_id: 'identity_id_example'}) # AdminCreateSelfServiceRecoveryLinkBody | 
 }
@@ -135,7 +138,7 @@ begin
   result = api_instance.admin_create_self_service_recovery_link(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_create_self_service_recovery_link: #{e}"
+  puts "Error when calling V0alpha2Api->admin_create_self_service_recovery_link: #{e}"
 end
 ```
 
@@ -153,7 +156,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceRecoveryLink>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_create_self_service_recovery_link_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->admin_create_self_service_recovery_link_with_http_info: #{e}"
 end
 ```
 
@@ -198,14 +201,14 @@ OryKratosClient.configure do |config|
   # config.api_key_prefix['oryAccessToken'] = 'Bearer'
 end
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | ID is the identity's ID.
 
 begin
   # Delete an Identity
   api_instance.admin_delete_identity(id)
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_delete_identity: #{e}"
+  puts "Error when calling V0alpha2Api->admin_delete_identity: #{e}"
 end
 ```
 
@@ -223,7 +226,77 @@ begin
   p headers # => { ... }
   p data # => nil
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_delete_identity_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->admin_delete_identity_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **String** | ID is the identity&#39;s ID. |  |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[oryAccessToken](../README.md#oryAccessToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## admin_delete_identity_sessions
+
+> admin_delete_identity_sessions(id)
+
+Calling this endpoint irrecoverably and permanently deletes and invalidates all sessions that belong to the given Identity.
+
+This endpoint is useful for:  To forcefully logout Identity from all devices and sessions
+
+### Examples
+
+```ruby
+require 'time'
+require 'ory-kratos-client'
+# setup authorization
+OryKratosClient.configure do |config|
+  # Configure API key authorization: oryAccessToken
+  config.api_key['oryAccessToken'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['oryAccessToken'] = 'Bearer'
+end
+
+api_instance = OryKratosClient::V0alpha2Api.new
+id = 'id_example' # String | ID is the identity's ID.
+
+begin
+  # Calling this endpoint irrecoverably and permanently deletes and invalidates all sessions that belong to the given Identity.
+  api_instance.admin_delete_identity_sessions(id)
+rescue OryKratosClient::ApiError => e
+  puts "Error when calling V0alpha2Api->admin_delete_identity_sessions: #{e}"
+end
+```
+
+#### Using the admin_delete_identity_sessions_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> admin_delete_identity_sessions_with_http_info(id)
+
+```ruby
+begin
+  # Calling this endpoint irrecoverably and permanently deletes and invalidates all sessions that belong to the given Identity.
+  data, status_code, headers = api_instance.admin_delete_identity_sessions_with_http_info(id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OryKratosClient::ApiError => e
+  puts "Error when calling V0alpha2Api->admin_delete_identity_sessions_with_http_info: #{e}"
 end
 ```
 
@@ -249,7 +322,7 @@ nil (empty response body)
 
 ## admin_get_identity
 
-> <Identity> admin_get_identity(id)
+> <Identity> admin_get_identity(id, opts)
 
 Get an Identity
 
@@ -268,15 +341,18 @@ OryKratosClient.configure do |config|
   # config.api_key_prefix['oryAccessToken'] = 'Bearer'
 end
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | ID must be set to the ID of identity you want to get
+opts = {
+  include_credential: ['inner_example'] # Array<String> | DeclassifyCredentials will declassify one or more identity's credentials  Currently, only `oidc` is supported. This will return the initial OAuth 2.0 Access, Refresh and (optionally) OpenID Connect ID Token.
+}
 
 begin
   # Get an Identity
-  result = api_instance.admin_get_identity(id)
+  result = api_instance.admin_get_identity(id, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_get_identity: #{e}"
+  puts "Error when calling V0alpha2Api->admin_get_identity: #{e}"
 end
 ```
 
@@ -284,17 +360,17 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Identity>, Integer, Hash)> admin_get_identity_with_http_info(id)
+> <Array(<Identity>, Integer, Hash)> admin_get_identity_with_http_info(id, opts)
 
 ```ruby
 begin
   # Get an Identity
-  data, status_code, headers = api_instance.admin_get_identity_with_http_info(id)
+  data, status_code, headers = api_instance.admin_get_identity_with_http_info(id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Identity>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_get_identity_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->admin_get_identity_with_http_info: #{e}"
 end
 ```
 
@@ -303,6 +379,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | ID must be set to the ID of identity you want to get |  |
+| **include_credential** | [**Array&lt;String&gt;**](String.md) | DeclassifyCredentials will declassify one or more identity&#39;s credentials  Currently, only &#x60;oidc&#x60; is supported. This will return the initial OAuth 2.0 Access, Refresh and (optionally) OpenID Connect ID Token. | [optional] |
 
 ### Return type
 
@@ -339,7 +416,7 @@ OryKratosClient.configure do |config|
   # config.api_key_prefix['oryAccessToken'] = 'Bearer'
 end
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
   per_page: 789, # Integer | Items per Page  This is the number of items per page.
   page: 789 # Integer | Pagination Page
@@ -350,7 +427,7 @@ begin
   result = api_instance.admin_list_identities(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_list_identities: #{e}"
+  puts "Error when calling V0alpha2Api->admin_list_identities: #{e}"
 end
 ```
 
@@ -368,7 +445,7 @@ begin
   p headers # => { ... }
   p data # => <Array<Identity>>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_list_identities_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->admin_list_identities_with_http_info: #{e}"
 end
 ```
 
@@ -414,7 +491,7 @@ OryKratosClient.configure do |config|
   # config.api_key_prefix['oryAccessToken'] = 'Bearer'
 end
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | ID must be set to the ID of identity you want to update
 opts = {
   admin_update_identity_body: OryKratosClient::AdminUpdateIdentityBody.new({state: OryKratosClient::IdentityState::ACTIVE, traits: 3.56}) # AdminUpdateIdentityBody | 
@@ -425,7 +502,7 @@ begin
   result = api_instance.admin_update_identity(id, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_update_identity: #{e}"
+  puts "Error when calling V0alpha2Api->admin_update_identity: #{e}"
 end
 ```
 
@@ -443,7 +520,7 @@ begin
   p headers # => { ... }
   p data # => <Identity>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->admin_update_identity_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->admin_update_identity_with_http_info: #{e}"
 end
 ```
 
@@ -482,7 +559,7 @@ This endpoint initializes a browser-based user logout flow and a URL which can b
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
   cookie: 'cookie_example' # String | HTTP Cookies  If you call this endpoint from a backend, please include the original Cookie header in the request.
 }
@@ -492,7 +569,7 @@ begin
   result = api_instance.create_self_service_logout_flow_url_for_browsers(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->create_self_service_logout_flow_url_for_browsers: #{e}"
+  puts "Error when calling V0alpha2Api->create_self_service_logout_flow_url_for_browsers: #{e}"
 end
 ```
 
@@ -510,7 +587,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceLogoutUrl>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->create_self_service_logout_flow_url_for_browsers_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->create_self_service_logout_flow_url_for_browsers_with_http_info: #{e}"
 end
 ```
 
@@ -548,7 +625,7 @@ Get a JSON Schema
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | ID must be set to the ID of schema you want to get
 
 begin
@@ -556,7 +633,7 @@ begin
   result = api_instance.get_json_schema(id)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_json_schema: #{e}"
+  puts "Error when calling V0alpha2Api->get_json_schema: #{e}"
 end
 ```
 
@@ -574,7 +651,7 @@ begin
   p headers # => { ... }
   p data # => Object
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_json_schema_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->get_json_schema_with_http_info: #{e}"
 end
 ```
 
@@ -612,7 +689,7 @@ This endpoint returns the error associated with a user-facing self service error
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | Error is the error's ID
 
 begin
@@ -620,7 +697,7 @@ begin
   result = api_instance.get_self_service_error(id)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_error: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_error: #{e}"
 end
 ```
 
@@ -638,7 +715,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceError>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_error_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_error_with_http_info: #{e}"
 end
 ```
 
@@ -668,7 +745,7 @@ No authorization required
 
 Get Login Flow
 
-This endpoint returns a login flow's context with, for example, error details and other information.  Browser flows expect the anti-CSRF cookie to be included in the request's HTTP Cookie Header. For AJAX requests you must ensure that cookies are included in the request or requests will fail.  If you use the browser-flow for server-side apps, the services need to run on a common top-level-domain and you need to forward the incoming HTTP Cookie header to this endpoint:  ```js pseudo-code example router.get('/login', async function (req, res) { const flow = await client.getSelfServiceLoginFlow(req.header('cookie'), req.query['flow'])  res.render('login', flow) }) ```  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+This endpoint returns a login flow's context with, for example, error details and other information.  Browser flows expect the anti-CSRF cookie to be included in the request's HTTP Cookie Header. For AJAX requests you must ensure that cookies are included in the request or requests will fail.  If you use the browser-flow for server-side apps, the services need to run on a common top-level-domain and you need to forward the incoming HTTP Cookie header to this endpoint:  ```js pseudo-code example router.get('/login', async function (req, res) { const flow = await client.getSelfServiceLoginFlow(req.header('cookie'), req.query['flow'])  res.render('login', flow) }) ```  This request may fail due to several reasons. The `error.id` can be one of:  `session_already_available`: The user is already signed in. `self_service_flow_expired`: The flow is expired and you should request a new one.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
 
 ### Examples
 
@@ -676,7 +753,7 @@ This endpoint returns a login flow's context with, for example, error details an
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | The Login Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/login?flow=abcde`).
 opts = {
   cookie: 'cookie_example' # String | HTTP Cookies  When using the SDK on the server side you must include the HTTP Cookie Header originally sent to your HTTP handler here.
@@ -687,7 +764,7 @@ begin
   result = api_instance.get_self_service_login_flow(id, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_login_flow: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_login_flow: #{e}"
 end
 ```
 
@@ -705,7 +782,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceLoginFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_login_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_login_flow_with_http_info: #{e}"
 end
 ```
 
@@ -744,7 +821,7 @@ This endpoint returns a recovery flow's context with, for example, error details
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | The Flow ID  The value for this parameter comes from `request` URL Query parameter sent to your application (e.g. `/recovery?flow=abcde`).
 opts = {
   cookie: 'cookie_example' # String | HTTP Cookies  When using the SDK on the server side you must include the HTTP Cookie Header originally sent to your HTTP handler here.
@@ -755,7 +832,7 @@ begin
   result = api_instance.get_self_service_recovery_flow(id, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_recovery_flow: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_recovery_flow: #{e}"
 end
 ```
 
@@ -773,7 +850,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceRecoveryFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_recovery_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_recovery_flow_with_http_info: #{e}"
 end
 ```
 
@@ -804,7 +881,7 @@ No authorization required
 
 Get Registration Flow
 
-This endpoint returns a registration flow's context with, for example, error details and other information.  Browser flows expect the anti-CSRF cookie to be included in the request's HTTP Cookie Header. For AJAX requests you must ensure that cookies are included in the request or requests will fail.  If you use the browser-flow for server-side apps, the services need to run on a common top-level-domain and you need to forward the incoming HTTP Cookie header to this endpoint:  ```js pseudo-code example router.get('/registration', async function (req, res) { const flow = await client.getSelfServiceRegistrationFlow(req.header('cookie'), req.query['flow'])  res.render('registration', flow) }) ```  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+This endpoint returns a registration flow's context with, for example, error details and other information.  Browser flows expect the anti-CSRF cookie to be included in the request's HTTP Cookie Header. For AJAX requests you must ensure that cookies are included in the request or requests will fail.  If you use the browser-flow for server-side apps, the services need to run on a common top-level-domain and you need to forward the incoming HTTP Cookie header to this endpoint:  ```js pseudo-code example router.get('/registration', async function (req, res) { const flow = await client.getSelfServiceRegistrationFlow(req.header('cookie'), req.query['flow'])  res.render('registration', flow) }) ```  This request may fail due to several reasons. The `error.id` can be one of:  `session_already_available`: The user is already signed in. `self_service_flow_expired`: The flow is expired and you should request a new one.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
 
 ### Examples
 
@@ -812,7 +889,7 @@ This endpoint returns a registration flow's context with, for example, error det
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | The Registration Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/registration?flow=abcde`).
 opts = {
   cookie: 'cookie_example' # String | HTTP Cookies  When using the SDK on the server side you must include the HTTP Cookie Header originally sent to your HTTP handler here.
@@ -823,7 +900,7 @@ begin
   result = api_instance.get_self_service_registration_flow(id, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_registration_flow: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_registration_flow: #{e}"
 end
 ```
 
@@ -841,7 +918,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceRegistrationFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_registration_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_registration_flow_with_http_info: #{e}"
 end
 ```
 
@@ -872,7 +949,7 @@ No authorization required
 
 Get Settings Flow
 
-When accessing this endpoint through Ory Kratos' Public API you must ensure that either the Ory Kratos Session Cookie or the Ory Kratos Session Token are set. The public endpoint does not return 404 status codes but instead 403 or 500 to improve data privacy.  You can access this endpoint without credentials when using Ory Kratos' Admin API.  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
+When accessing this endpoint through Ory Kratos' Public API you must ensure that either the Ory Kratos Session Cookie or the Ory Kratos Session Token are set.  Depending on your configuration this endpoint might return a 403 error if the session has a lower Authenticator Assurance Level (AAL) than is possible for the identity. This can happen if the identity has password + webauthn credentials (which would result in AAL2) but the session has only AAL1. If this error occurs, ask the user to sign in with the second factor or change the configuration.  You can access this endpoint without credentials when using Ory Kratos' Admin API.  If this endpoint is called via an AJAX request, the response contains the flow without a redirect. In the case of an error, the `error.id` of the JSON response body can be one of:  `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `session_inactive`: No Ory Session was found - sign in a user first. `security_identity_mismatch`: The flow was interrupted with `session_refresh_required` but apparently some other identity logged in instead.  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
 
 ### Examples
 
@@ -880,7 +957,7 @@ When accessing this endpoint through Ory Kratos' Public API you must ensure that
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | ID is the Settings Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/settings?flow=abcde`).
 opts = {
   x_session_token: 'x_session_token_example', # String | The Session Token  When using the SDK in an app without a browser, please include the session token here.
@@ -892,7 +969,7 @@ begin
   result = api_instance.get_self_service_settings_flow(id, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_settings_flow: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_settings_flow: #{e}"
 end
 ```
 
@@ -910,7 +987,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceSettingsFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_settings_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_settings_flow_with_http_info: #{e}"
 end
 ```
 
@@ -950,7 +1027,7 @@ This endpoint returns a verification flow's context with, for example, error det
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 id = 'id_example' # String | The Flow ID  The value for this parameter comes from `request` URL Query parameter sent to your application (e.g. `/verification?flow=abcde`).
 opts = {
   cookie: 'cookie_example' # String | HTTP Cookies  When using the SDK on the server side you must include the HTTP Cookie Header originally sent to your HTTP handler here.
@@ -961,7 +1038,7 @@ begin
   result = api_instance.get_self_service_verification_flow(id, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_verification_flow: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_verification_flow: #{e}"
 end
 ```
 
@@ -979,7 +1056,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceVerificationFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->get_self_service_verification_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->get_self_service_verification_flow_with_http_info: #{e}"
 end
 ```
 
@@ -1004,13 +1081,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## initialize_self_service_login_flow_for_browsers
+## get_web_authn_java_script
 
-> <SelfServiceLoginFlow> initialize_self_service_login_flow_for_browsers(opts)
+> String get_web_authn_java_script
 
-Initialize Login Flow for Browsers
+Get WebAuthn JavaScript
 
-This endpoint initializes a browser-based user login flow. This endpoint will set the appropriate cookies and anti-CSRF measures required for browser-based flows.  If this endpoint is opened as a link in the browser, it will be redirected to `selfservice.flows.login.ui_url` with the flow ID set as the query parameter `?flow=`. If a valid user session exists already, the browser will be redirected to `urls.default_redirect_url` unless the query parameter `?refresh=true` was set.  If this endpoint is called via an AJAX request, the response contains the login flow without a redirect.  This endpoint is NOT INTENDED for clients that do not have a browser (Chrome, Firefox, ...) as cookies are needed.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+This endpoint provides JavaScript which is needed in order to perform WebAuthn login and registration.  If you are building a JavaScript Browser App (e.g. in ReactJS or AngularJS) you will need to load this file:  ```html <script src=\"https://public-kratos.example.org/.well-known/ory/webauthn.js\" type=\"script\" async /> ```  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
 
 ### Examples
 
@@ -1018,9 +1095,72 @@ This endpoint initializes a browser-based user login flow. This endpoint will se
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
+
+begin
+  # Get WebAuthn JavaScript
+  result = api_instance.get_web_authn_java_script
+  p result
+rescue OryKratosClient::ApiError => e
+  puts "Error when calling V0alpha2Api->get_web_authn_java_script: #{e}"
+end
+```
+
+#### Using the get_web_authn_java_script_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(String, Integer, Hash)> get_web_authn_java_script_with_http_info
+
+```ruby
+begin
+  # Get WebAuthn JavaScript
+  data, status_code, headers = api_instance.get_web_authn_java_script_with_http_info
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => String
+rescue OryKratosClient::ApiError => e
+  puts "Error when calling V0alpha2Api->get_web_authn_java_script_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## initialize_self_service_login_flow_for_browsers
+
+> <SelfServiceLoginFlow> initialize_self_service_login_flow_for_browsers(opts)
+
+Initialize Login Flow for Browsers
+
+This endpoint initializes a browser-based user login flow. This endpoint will set the appropriate cookies and anti-CSRF measures required for browser-based flows.  If this endpoint is opened as a link in the browser, it will be redirected to `selfservice.flows.login.ui_url` with the flow ID set as the query parameter `?flow=`. If a valid user session exists already, the browser will be redirected to `urls.default_redirect_url` unless the query parameter `?refresh=true` was set.  If this endpoint is called via an AJAX request, the response contains the flow without a redirect. In the case of an error, the `error.id` of the JSON response body can be one of:  `session_already_available`: The user is already signed in. `session_aal1_required`: Multi-factor auth (e.g. 2fa) was requested but the user has no session yet. `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `security_identity_mismatch`: The requested `?return_to` address is not allowed to be used. Adjust this in the configuration!  This endpoint is NOT INTENDED for clients that do not have a browser (Chrome, Firefox, ...) as cookies are needed.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+
+### Examples
+
+```ruby
+require 'time'
+require 'ory-kratos-client'
+
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
-  refresh: true # Boolean | Refresh a login session  If set to true, this will refresh an existing login session by asking the user to sign in again. This will reset the authenticated_at time of the session.
+  refresh: true, # Boolean | Refresh a login session  If set to true, this will refresh an existing login session by asking the user to sign in again. This will reset the authenticated_at time of the session.
+  aal: 'aal_example', # String | Request a Specific AuthenticationMethod Assurance Level  Use this parameter to upgrade an existing session's authenticator assurance level (AAL). This allows you to ask for multi-factor authentication. When an identity sign in using e.g. username+password, the AAL is 1. If you wish to \"upgrade\" the session's security by asking the user to perform TOTP / WebAuth/ ... you would set this to \"aal2\".
+  return_to: 'return_to_example' # String | The URL to return the browser to after the flow was completed.
 }
 
 begin
@@ -1028,7 +1168,7 @@ begin
   result = api_instance.initialize_self_service_login_flow_for_browsers(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_login_flow_for_browsers: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_login_flow_for_browsers: #{e}"
 end
 ```
 
@@ -1046,7 +1186,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceLoginFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_login_flow_for_browsers_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_login_flow_for_browsers_with_http_info: #{e}"
 end
 ```
 
@@ -1055,6 +1195,8 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **refresh** | **Boolean** | Refresh a login session  If set to true, this will refresh an existing login session by asking the user to sign in again. This will reset the authenticated_at time of the session. | [optional] |
+| **aal** | **String** | Request a Specific AuthenticationMethod Assurance Level  Use this parameter to upgrade an existing session&#39;s authenticator assurance level (AAL). This allows you to ask for multi-factor authentication. When an identity sign in using e.g. username+password, the AAL is 1. If you wish to \&quot;upgrade\&quot; the session&#39;s security by asking the user to perform TOTP / WebAuth/ ... you would set this to \&quot;aal2\&quot;. | [optional] |
+| **return_to** | **String** | The URL to return the browser to after the flow was completed. | [optional] |
 
 ### Return type
 
@@ -1076,7 +1218,7 @@ No authorization required
 
 Initialize Login Flow for APIs, Services, Apps, ...
 
-This endpoint initiates a login flow for API clients that do not use a browser, such as mobile devices, smart TVs, and so on.  If a valid provided session cookie or session token is provided, a 400 Bad Request error will be returned unless the URL query parameter `?refresh=true` is set.  To fetch an existing login flow call `/self-service/login/flows?flow=<flow_id>`.  You MUST NOT use this endpoint in client-side (Single Page Apps, ReactJS, AngularJS) nor server-side (Java Server Pages, NodeJS, PHP, Golang, ...) browser applications. Using this endpoint in these applications will make you vulnerable to a variety of CSRF attacks, including CSRF login attacks.  This endpoint MUST ONLY be used in scenarios such as native mobile apps (React Native, Objective C, Swift, Java, ...).  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+This endpoint initiates a login flow for API clients that do not use a browser, such as mobile devices, smart TVs, and so on.  If a valid provided session cookie or session token is provided, a 400 Bad Request error will be returned unless the URL query parameter `?refresh=true` is set.  To fetch an existing login flow call `/self-service/login/flows?flow=<flow_id>`.  You MUST NOT use this endpoint in client-side (Single Page Apps, ReactJS, AngularJS) nor server-side (Java Server Pages, NodeJS, PHP, Golang, ...) browser applications. Using this endpoint in these applications will make you vulnerable to a variety of CSRF attacks, including CSRF login attacks.  In the case of an error, the `error.id` of the JSON response body can be one of:  `session_already_available`: The user is already signed in. `session_aal1_required`: Multi-factor auth (e.g. 2fa) was requested but the user has no session yet. `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred.  This endpoint MUST ONLY be used in scenarios such as native mobile apps (React Native, Objective C, Swift, Java, ...).  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
 
 ### Examples
 
@@ -1084,9 +1226,11 @@ This endpoint initiates a login flow for API clients that do not use a browser, 
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
-  refresh: true # Boolean | Refresh a login session  If set to true, this will refresh an existing login session by asking the user to sign in again. This will reset the authenticated_at time of the session.
+  refresh: true, # Boolean | Refresh a login session  If set to true, this will refresh an existing login session by asking the user to sign in again. This will reset the authenticated_at time of the session.
+  aal: 'aal_example', # String | Request a Specific AuthenticationMethod Assurance Level  Use this parameter to upgrade an existing session's authenticator assurance level (AAL). This allows you to ask for multi-factor authentication. When an identity sign in using e.g. username+password, the AAL is 1. If you wish to \"upgrade\" the session's security by asking the user to perform TOTP / WebAuth/ ... you would set this to \"aal2\".
+  x_session_token: 'x_session_token_example' # String | The Session Token of the Identity performing the settings flow.
 }
 
 begin
@@ -1094,7 +1238,7 @@ begin
   result = api_instance.initialize_self_service_login_flow_without_browser(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_login_flow_without_browser: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_login_flow_without_browser: #{e}"
 end
 ```
 
@@ -1112,7 +1256,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceLoginFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_login_flow_without_browser_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_login_flow_without_browser_with_http_info: #{e}"
 end
 ```
 
@@ -1121,6 +1265,8 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **refresh** | **Boolean** | Refresh a login session  If set to true, this will refresh an existing login session by asking the user to sign in again. This will reset the authenticated_at time of the session. | [optional] |
+| **aal** | **String** | Request a Specific AuthenticationMethod Assurance Level  Use this parameter to upgrade an existing session&#39;s authenticator assurance level (AAL). This allows you to ask for multi-factor authentication. When an identity sign in using e.g. username+password, the AAL is 1. If you wish to \&quot;upgrade\&quot; the session&#39;s security by asking the user to perform TOTP / WebAuth/ ... you would set this to \&quot;aal2\&quot;. | [optional] |
+| **x_session_token** | **String** | The Session Token of the Identity performing the settings flow. | [optional] |
 
 ### Return type
 
@@ -1138,7 +1284,7 @@ No authorization required
 
 ## initialize_self_service_recovery_flow_for_browsers
 
-> <SelfServiceRecoveryFlow> initialize_self_service_recovery_flow_for_browsers
+> <SelfServiceRecoveryFlow> initialize_self_service_recovery_flow_for_browsers(opts)
 
 Initialize Recovery Flow for Browsers
 
@@ -1150,14 +1296,17 @@ This endpoint initializes a browser-based account recovery flow. Once initialize
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
+opts = {
+  return_to: 'return_to_example' # String | The URL to return the browser to after the flow was completed.
+}
 
 begin
   # Initialize Recovery Flow for Browsers
-  result = api_instance.initialize_self_service_recovery_flow_for_browsers
+  result = api_instance.initialize_self_service_recovery_flow_for_browsers(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_recovery_flow_for_browsers: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_recovery_flow_for_browsers: #{e}"
 end
 ```
 
@@ -1165,23 +1314,25 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SelfServiceRecoveryFlow>, Integer, Hash)> initialize_self_service_recovery_flow_for_browsers_with_http_info
+> <Array(<SelfServiceRecoveryFlow>, Integer, Hash)> initialize_self_service_recovery_flow_for_browsers_with_http_info(opts)
 
 ```ruby
 begin
   # Initialize Recovery Flow for Browsers
-  data, status_code, headers = api_instance.initialize_self_service_recovery_flow_for_browsers_with_http_info
+  data, status_code, headers = api_instance.initialize_self_service_recovery_flow_for_browsers_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SelfServiceRecoveryFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_recovery_flow_for_browsers_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_recovery_flow_for_browsers_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **return_to** | **String** | The URL to return the browser to after the flow was completed. | [optional] |
 
 ### Return type
 
@@ -1211,14 +1362,14 @@ This endpoint initiates a recovery flow for API clients such as mobile devices, 
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 
 begin
   # Initialize Recovery Flow for APIs, Services, Apps, ...
   result = api_instance.initialize_self_service_recovery_flow_without_browser
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_recovery_flow_without_browser: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_recovery_flow_without_browser: #{e}"
 end
 ```
 
@@ -1236,7 +1387,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceRecoveryFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_recovery_flow_without_browser_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_recovery_flow_without_browser_with_http_info: #{e}"
 end
 ```
 
@@ -1260,11 +1411,11 @@ No authorization required
 
 ## initialize_self_service_registration_flow_for_browsers
 
-> <SelfServiceRegistrationFlow> initialize_self_service_registration_flow_for_browsers
+> <SelfServiceRegistrationFlow> initialize_self_service_registration_flow_for_browsers(opts)
 
 Initialize Registration Flow for Browsers
 
-This endpoint initializes a browser-based user registration flow. This endpoint will set the appropriate cookies and anti-CSRF measures required for browser-based flows.  :::info  This endpoint is EXPERIMENTAL and subject to potential breaking changes in the future.  :::  If this endpoint is opened as a link in the browser, it will be redirected to `selfservice.flows.registration.ui_url` with the flow ID set as the query parameter `?flow=`. If a valid user session exists already, the browser will be redirected to `urls.default_redirect_url`.  If this endpoint is called via an AJAX request, the response contains the registration flow without a redirect.  This endpoint is NOT INTENDED for clients that do not have a browser (Chrome, Firefox, ...) as cookies are needed.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+This endpoint initializes a browser-based user registration flow. This endpoint will set the appropriate cookies and anti-CSRF measures required for browser-based flows.  :::info  This endpoint is EXPERIMENTAL and subject to potential breaking changes in the future.  :::  If this endpoint is opened as a link in the browser, it will be redirected to `selfservice.flows.registration.ui_url` with the flow ID set as the query parameter `?flow=`. If a valid user session exists already, the browser will be redirected to `urls.default_redirect_url`.  If this endpoint is called via an AJAX request, the response contains the flow without a redirect. In the case of an error, the `error.id` of the JSON response body can be one of:  `session_already_available`: The user is already signed in. `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `security_identity_mismatch`: The requested `?return_to` address is not allowed to be used. Adjust this in the configuration!  If this endpoint is called via an AJAX request, the response contains the registration flow without a redirect.  This endpoint is NOT INTENDED for clients that do not have a browser (Chrome, Firefox, ...) as cookies are needed.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
 
 ### Examples
 
@@ -1272,14 +1423,17 @@ This endpoint initializes a browser-based user registration flow. This endpoint 
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
+opts = {
+  return_to: 'return_to_example' # String | The URL to return the browser to after the flow was completed.
+}
 
 begin
   # Initialize Registration Flow for Browsers
-  result = api_instance.initialize_self_service_registration_flow_for_browsers
+  result = api_instance.initialize_self_service_registration_flow_for_browsers(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_registration_flow_for_browsers: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_registration_flow_for_browsers: #{e}"
 end
 ```
 
@@ -1287,23 +1441,25 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SelfServiceRegistrationFlow>, Integer, Hash)> initialize_self_service_registration_flow_for_browsers_with_http_info
+> <Array(<SelfServiceRegistrationFlow>, Integer, Hash)> initialize_self_service_registration_flow_for_browsers_with_http_info(opts)
 
 ```ruby
 begin
   # Initialize Registration Flow for Browsers
-  data, status_code, headers = api_instance.initialize_self_service_registration_flow_for_browsers_with_http_info
+  data, status_code, headers = api_instance.initialize_self_service_registration_flow_for_browsers_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SelfServiceRegistrationFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_registration_flow_for_browsers_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_registration_flow_for_browsers_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **return_to** | **String** | The URL to return the browser to after the flow was completed. | [optional] |
 
 ### Return type
 
@@ -1325,7 +1481,7 @@ No authorization required
 
 Initialize Registration Flow for APIs, Services, Apps, ...
 
-This endpoint initiates a registration flow for API clients such as mobile devices, smart TVs, and so on.  If a valid provided session cookie or session token is provided, a 400 Bad Request error will be returned unless the URL query parameter `?refresh=true` is set.  To fetch an existing registration flow call `/self-service/registration/flows?flow=<flow_id>`.  You MUST NOT use this endpoint in client-side (Single Page Apps, ReactJS, AngularJS) nor server-side (Java Server Pages, NodeJS, PHP, Golang, ...) browser applications. Using this endpoint in these applications will make you vulnerable to a variety of CSRF attacks.  This endpoint MUST ONLY be used in scenarios such as native mobile apps (React Native, Objective C, Swift, Java, ...).  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+This endpoint initiates a registration flow for API clients such as mobile devices, smart TVs, and so on.  If a valid provided session cookie or session token is provided, a 400 Bad Request error will be returned unless the URL query parameter `?refresh=true` is set.  To fetch an existing registration flow call `/self-service/registration/flows?flow=<flow_id>`.  You MUST NOT use this endpoint in client-side (Single Page Apps, ReactJS, AngularJS) nor server-side (Java Server Pages, NodeJS, PHP, Golang, ...) browser applications. Using this endpoint in these applications will make you vulnerable to a variety of CSRF attacks.  In the case of an error, the `error.id` of the JSON response body can be one of:  `session_already_available`: The user is already signed in. `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred.  This endpoint MUST ONLY be used in scenarios such as native mobile apps (React Native, Objective C, Swift, Java, ...).  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
 
 ### Examples
 
@@ -1333,14 +1489,14 @@ This endpoint initiates a registration flow for API clients such as mobile devic
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 
 begin
   # Initialize Registration Flow for APIs, Services, Apps, ...
   result = api_instance.initialize_self_service_registration_flow_without_browser
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_registration_flow_without_browser: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_registration_flow_without_browser: #{e}"
 end
 ```
 
@@ -1358,7 +1514,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceRegistrationFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_registration_flow_without_browser_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_registration_flow_without_browser_with_http_info: #{e}"
 end
 ```
 
@@ -1386,7 +1542,7 @@ No authorization required
 
 Initialize Settings Flow for Browsers
 
-This endpoint initializes a browser-based user settings flow. Once initialized, the browser will be redirected to `selfservice.flows.settings.ui_url` with the flow ID set as the query parameter `?flow=`. If no valid Ory Kratos Session Cookie is included in the request, a login flow will be initialized.  If this endpoint is opened as a link in the browser, it will be redirected to `selfservice.flows.settings.ui_url` with the flow ID set as the query parameter `?flow=`. If no valid user session was set, the browser will be redirected to the login endpoint.  If this endpoint is called via an AJAX request, the response contains the settings flow without any redirects or a 403 forbidden error if no valid session was set.  This endpoint is NOT INTENDED for clients that do not have a browser (Chrome, Firefox, ...) as cookies are needed.  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
+This endpoint initializes a browser-based user settings flow. Once initialized, the browser will be redirected to `selfservice.flows.settings.ui_url` with the flow ID set as the query parameter `?flow=`. If no valid Ory Kratos Session Cookie is included in the request, a login flow will be initialized.  If this endpoint is opened as a link in the browser, it will be redirected to `selfservice.flows.settings.ui_url` with the flow ID set as the query parameter `?flow=`. If no valid user session was set, the browser will be redirected to the login endpoint.  If this endpoint is called via an AJAX request, the response contains the settings flow without any redirects or a 401 forbidden error if no valid session was set.  Depending on your configuration this endpoint might return a 403 error if the session has a lower Authenticator Assurance Level (AAL) than is possible for the identity. This can happen if the identity has password + webauthn credentials (which would result in AAL2) but the session has only AAL1. If this error occurs, ask the user to sign in with the second factor (happens automatically for server-side browser flows) or change the configuration.  If this endpoint is called via an AJAX request, the response contains the flow without a redirect. In the case of an error, the `error.id` of the JSON response body can be one of:  `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `session_inactive`: No Ory Session was found - sign in a user first. `security_identity_mismatch`: The requested `?return_to` address is not allowed to be used. Adjust this in the configuration!  This endpoint is NOT INTENDED for clients that do not have a browser (Chrome, Firefox, ...) as cookies are needed.  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
 
 ### Examples
 
@@ -1394,9 +1550,9 @@ This endpoint initializes a browser-based user settings flow. Once initialized, 
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
-  cookie: 'cookie_example' # String | The Session Cookie of the Identity performing the settings flow.
+  return_to: 'return_to_example' # String | The URL to return the browser to after the flow was completed.
 }
 
 begin
@@ -1404,7 +1560,7 @@ begin
   result = api_instance.initialize_self_service_settings_flow_for_browsers(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_settings_flow_for_browsers: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_settings_flow_for_browsers: #{e}"
 end
 ```
 
@@ -1422,7 +1578,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceSettingsFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_settings_flow_for_browsers_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_settings_flow_for_browsers_with_http_info: #{e}"
 end
 ```
 
@@ -1430,7 +1586,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **cookie** | **String** | The Session Cookie of the Identity performing the settings flow. | [optional] |
+| **return_to** | **String** | The URL to return the browser to after the flow was completed. | [optional] |
 
 ### Return type
 
@@ -1452,7 +1608,7 @@ No authorization required
 
 Initialize Settings Flow for APIs, Services, Apps, ...
 
-This endpoint initiates a settings flow for API clients such as mobile devices, smart TVs, and so on. You must provide a valid Ory Kratos Session Token for this endpoint to respond with HTTP 200 OK.  To fetch an existing settings flow call `/self-service/settings/flows?flow=<flow_id>`.  You MUST NOT use this endpoint in client-side (Single Page Apps, ReactJS, AngularJS) nor server-side (Java Server Pages, NodeJS, PHP, Golang, ...) browser applications. Using this endpoint in these applications will make you vulnerable to a variety of CSRF attacks.  This endpoint MUST ONLY be used in scenarios such as native mobile apps (React Native, Objective C, Swift, Java, ...).  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
+This endpoint initiates a settings flow for API clients such as mobile devices, smart TVs, and so on. You must provide a valid Ory Kratos Session Token for this endpoint to respond with HTTP 200 OK.  To fetch an existing settings flow call `/self-service/settings/flows?flow=<flow_id>`.  You MUST NOT use this endpoint in client-side (Single Page Apps, ReactJS, AngularJS) nor server-side (Java Server Pages, NodeJS, PHP, Golang, ...) browser applications. Using this endpoint in these applications will make you vulnerable to a variety of CSRF attacks.  Depending on your configuration this endpoint might return a 403 error if the session has a lower Authenticator Assurance Level (AAL) than is possible for the identity. This can happen if the identity has password + webauthn credentials (which would result in AAL2) but the session has only AAL1. If this error occurs, ask the user to sign in with the second factor or change the configuration.  In the case of an error, the `error.id` of the JSON response body can be one of:  `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `session_inactive`: No Ory Session was found - sign in a user first.  This endpoint MUST ONLY be used in scenarios such as native mobile apps (React Native, Objective C, Swift, Java, ...).  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
 
 ### Examples
 
@@ -1460,7 +1616,7 @@ This endpoint initiates a settings flow for API clients such as mobile devices, 
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
   x_session_token: 'x_session_token_example' # String | The Session Token of the Identity performing the settings flow.
 }
@@ -1470,7 +1626,7 @@ begin
   result = api_instance.initialize_self_service_settings_flow_without_browser(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_settings_flow_without_browser: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_settings_flow_without_browser: #{e}"
 end
 ```
 
@@ -1488,7 +1644,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceSettingsFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_settings_flow_without_browser_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_settings_flow_without_browser_with_http_info: #{e}"
 end
 ```
 
@@ -1514,7 +1670,7 @@ No authorization required
 
 ## initialize_self_service_verification_flow_for_browsers
 
-> <SelfServiceVerificationFlow> initialize_self_service_verification_flow_for_browsers
+> <SelfServiceVerificationFlow> initialize_self_service_verification_flow_for_browsers(opts)
 
 Initialize Verification Flow for Browser Clients
 
@@ -1526,14 +1682,17 @@ This endpoint initializes a browser-based account verification flow. Once initia
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
+opts = {
+  return_to: 'return_to_example' # String | The URL to return the browser to after the flow was completed.
+}
 
 begin
   # Initialize Verification Flow for Browser Clients
-  result = api_instance.initialize_self_service_verification_flow_for_browsers
+  result = api_instance.initialize_self_service_verification_flow_for_browsers(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_verification_flow_for_browsers: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_verification_flow_for_browsers: #{e}"
 end
 ```
 
@@ -1541,23 +1700,25 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SelfServiceVerificationFlow>, Integer, Hash)> initialize_self_service_verification_flow_for_browsers_with_http_info
+> <Array(<SelfServiceVerificationFlow>, Integer, Hash)> initialize_self_service_verification_flow_for_browsers_with_http_info(opts)
 
 ```ruby
 begin
   # Initialize Verification Flow for Browser Clients
-  data, status_code, headers = api_instance.initialize_self_service_verification_flow_for_browsers_with_http_info
+  data, status_code, headers = api_instance.initialize_self_service_verification_flow_for_browsers_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SelfServiceVerificationFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_verification_flow_for_browsers_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_verification_flow_for_browsers_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **return_to** | **String** | The URL to return the browser to after the flow was completed. | [optional] |
 
 ### Return type
 
@@ -1587,14 +1748,14 @@ This endpoint initiates a verification flow for API clients such as mobile devic
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 
 begin
   # Initialize Verification Flow for APIs, Services, Apps, ...
   result = api_instance.initialize_self_service_verification_flow_without_browser
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_verification_flow_without_browser: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_verification_flow_without_browser: #{e}"
 end
 ```
 
@@ -1612,7 +1773,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceVerificationFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->initialize_self_service_verification_flow_without_browser_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->initialize_self_service_verification_flow_without_browser_with_http_info: #{e}"
 end
 ```
 
@@ -1634,13 +1795,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## submit_self_service_login_flow
+## list_identity_schemas
 
-> <SuccessfulSelfServiceLoginWithoutBrowser> submit_self_service_login_flow(flow, opts)
+> <Array<IdentitySchema>> list_identity_schemas(opts)
 
-Submit a Login Flow
 
-:::info  This endpoint is EXPERIMENTAL and subject to potential breaking changes in the future.  :::  Use this endpoint to complete a login flow. This endpoint behaves differently for API and browser flows.  API flows expect `application/json` to be sent in the body and responds with HTTP 200 and a application/json body with the session token on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  Browser flows expect a Content-Type of `application/x-www-form-urlencoded` or `application/json` to be sent in the body and respond with a HTTP 302 redirect to the post/after login URL or the `return_to` value if it was set and if the login succeeded; a HTTP 302 redirect to the login UI URL with the flow ID containing the validation errors otherwise.  Browser flows with an accept header of `application/json` will not redirect but instead respond with HTTP 200 and a application/json body with the signed in identity and a `Set-Cookie` header on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+
+Get all Identity Schemas
 
 ### Examples
 
@@ -1648,10 +1809,79 @@ Submit a Login Flow
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
+opts = {
+  per_page: 789, # Integer | Items per Page  This is the number of items per page.
+  page: 789 # Integer | Pagination Page
+}
+
+begin
+  
+  result = api_instance.list_identity_schemas(opts)
+  p result
+rescue OryKratosClient::ApiError => e
+  puts "Error when calling V0alpha2Api->list_identity_schemas: #{e}"
+end
+```
+
+#### Using the list_identity_schemas_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<IdentitySchema>>, Integer, Hash)> list_identity_schemas_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.list_identity_schemas_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<IdentitySchema>>
+rescue OryKratosClient::ApiError => e
+  puts "Error when calling V0alpha2Api->list_identity_schemas_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **per_page** | **Integer** | Items per Page  This is the number of items per page. | [optional][default to 100] |
+| **page** | **Integer** | Pagination Page | [optional][default to 0] |
+
+### Return type
+
+[**Array&lt;IdentitySchema&gt;**](IdentitySchema.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## submit_self_service_login_flow
+
+> <SuccessfulSelfServiceLoginWithoutBrowser> submit_self_service_login_flow(flow, opts)
+
+Submit a Login Flow
+
+:::info  This endpoint is EXPERIMENTAL and subject to potential breaking changes in the future.  :::  Use this endpoint to complete a login flow. This endpoint behaves differently for API and browser flows.  API flows expect `application/json` to be sent in the body and responds with HTTP 200 and a application/json body with the session token on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  Browser flows expect a Content-Type of `application/x-www-form-urlencoded` or `application/json` to be sent in the body and respond with a HTTP 302 redirect to the post/after login URL or the `return_to` value if it was set and if the login succeeded; a HTTP 302 redirect to the login UI URL with the flow ID containing the validation errors otherwise.  Browser flows with an accept header of `application/json` will not redirect but instead respond with HTTP 200 and a application/json body with the signed in identity and a `Set-Cookie` header on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  If this endpoint is called with `Accept: application/json` in the header, the response contains the flow without a redirect. In the case of an error, the `error.id` of the JSON response body can be one of:  `session_already_available`: The user is already signed in. `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `security_identity_mismatch`: The requested `?return_to` address is not allowed to be used. Adjust this in the configuration! `browser_location_change_required`: Usually sent when an AJAX request indicates that the browser needs to open a specific URL. Most likely used in Social Sign In flows.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+
+### Examples
+
+```ruby
+require 'time'
+require 'ory-kratos-client'
+
+api_instance = OryKratosClient::V0alpha2Api.new
 flow = 'flow_example' # String | The Login Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/login?flow=abcde`).
 opts = {
-  submit_self_service_login_flow_body: OryKratosClient::SubmitSelfServiceLoginFlowWithOidcMethodBody.new({method: 'method_example', traits: 'traits_example'}) # SubmitSelfServiceLoginFlowBody | 
+  x_session_token: 'x_session_token_example', # String | The Session Token of the Identity performing the settings flow.
+  submit_self_service_login_flow_body: OryKratosClient::SubmitSelfServiceLoginFlowWithOidcMethodBody.new({method: 'method_example', provider: 'provider_example'}) # SubmitSelfServiceLoginFlowBody | 
 }
 
 begin
@@ -1659,7 +1889,7 @@ begin
   result = api_instance.submit_self_service_login_flow(flow, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_login_flow: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_login_flow: #{e}"
 end
 ```
 
@@ -1677,7 +1907,7 @@ begin
   p headers # => { ... }
   p data # => <SuccessfulSelfServiceLoginWithoutBrowser>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_login_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_login_flow_with_http_info: #{e}"
 end
 ```
 
@@ -1686,6 +1916,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **flow** | **String** | The Login Flow ID  The value for this parameter comes from &#x60;flow&#x60; URL Query parameter sent to your application (e.g. &#x60;/login?flow&#x3D;abcde&#x60;). |  |
+| **x_session_token** | **String** | The Session Token of the Identity performing the settings flow. | [optional] |
 | **submit_self_service_login_flow_body** | [**SubmitSelfServiceLoginFlowBody**](SubmitSelfServiceLoginFlowBody.md) |  | [optional] |
 
 ### Return type
@@ -1716,16 +1947,17 @@ This endpoint logs out an identity in a self-service manner.  If the `Accept` HT
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
-  token: 'token_example' # String | A Valid Logout Token  If you do not have a logout token because you only have a session cookie, call `/self-service/logout/urls` to generate a URL for this endpoint.
+  token: 'token_example', # String | A Valid Logout Token  If you do not have a logout token because you only have a session cookie, call `/self-service/logout/urls` to generate a URL for this endpoint.
+  return_to: 'return_to_example' # String | The URL to return to after the logout was completed.
 }
 
 begin
   # Complete Self-Service Logout
   api_instance.submit_self_service_logout_flow(opts)
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_logout_flow: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_logout_flow: #{e}"
 end
 ```
 
@@ -1743,7 +1975,7 @@ begin
   p headers # => { ... }
   p data # => nil
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_logout_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_logout_flow_with_http_info: #{e}"
 end
 ```
 
@@ -1752,6 +1984,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **token** | **String** | A Valid Logout Token  If you do not have a logout token because you only have a session cookie, call &#x60;/self-service/logout/urls&#x60; to generate a URL for this endpoint. | [optional] |
+| **return_to** | **String** | The URL to return to after the logout was completed. | [optional] |
 
 ### Return type
 
@@ -1781,14 +2014,14 @@ Use this endpoint to log out an identity using an Ory Session Token. If the Ory 
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 submit_self_service_logout_flow_without_browser_body = OryKratosClient::SubmitSelfServiceLogoutFlowWithoutBrowserBody.new({session_token: 'session_token_example'}) # SubmitSelfServiceLogoutFlowWithoutBrowserBody | 
 
 begin
   # Perform Logout for APIs, Services, Apps, ...
   api_instance.submit_self_service_logout_flow_without_browser(submit_self_service_logout_flow_without_browser_body)
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_logout_flow_without_browser: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_logout_flow_without_browser: #{e}"
 end
 ```
 
@@ -1806,7 +2039,7 @@ begin
   p headers # => { ... }
   p data # => nil
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_logout_flow_without_browser_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_logout_flow_without_browser_with_http_info: #{e}"
 end
 ```
 
@@ -1844,7 +2077,7 @@ Use this endpoint to complete a recovery flow. This endpoint behaves differently
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 flow = 'flow_example' # String | The Recovery Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/recovery?flow=abcde`).
 opts = {
   token: 'token_example', # String | Recovery Token  The recovery token which completes the recovery request. If the token is invalid (e.g. expired) an error will be shown to the end-user.  This parameter is usually set in a link and not used by any direct API call.
@@ -1856,7 +2089,7 @@ begin
   result = api_instance.submit_self_service_recovery_flow(flow, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_recovery_flow: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_recovery_flow: #{e}"
 end
 ```
 
@@ -1874,7 +2107,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceRecoveryFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_recovery_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_recovery_flow_with_http_info: #{e}"
 end
 ```
 
@@ -1906,7 +2139,7 @@ No authorization required
 
 Submit a Registration Flow
 
-Use this endpoint to complete a registration flow by sending an identity's traits and password. This endpoint behaves differently for API and browser flows.  API flows expect `application/json` to be sent in the body and respond with HTTP 200 and a application/json body with the created identity success - if the session hook is configured the `session` and `session_token` will also be included; HTTP 302 redirect to a fresh registration flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  Browser flows expect a Content-Type of `application/x-www-form-urlencoded` or `application/json` to be sent in the body and respond with a HTTP 302 redirect to the post/after registration URL or the `return_to` value if it was set and if the registration succeeded; a HTTP 302 redirect to the registration UI URL with the flow ID containing the validation errors otherwise.  Browser flows with an accept header of `application/json` will not redirect but instead respond with HTTP 200 and a application/json body with the signed in identity and a `Set-Cookie` header on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
+Use this endpoint to complete a registration flow by sending an identity's traits and password. This endpoint behaves differently for API and browser flows.  API flows expect `application/json` to be sent in the body and respond with HTTP 200 and a application/json body with the created identity success - if the session hook is configured the `session` and `session_token` will also be included; HTTP 302 redirect to a fresh registration flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  Browser flows expect a Content-Type of `application/x-www-form-urlencoded` or `application/json` to be sent in the body and respond with a HTTP 302 redirect to the post/after registration URL or the `return_to` value if it was set and if the registration succeeded; a HTTP 302 redirect to the registration UI URL with the flow ID containing the validation errors otherwise.  Browser flows with an accept header of `application/json` will not redirect but instead respond with HTTP 200 and a application/json body with the signed in identity and a `Set-Cookie` header on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors.  If this endpoint is called with `Accept: application/json` in the header, the response contains the flow without a redirect. In the case of an error, the `error.id` of the JSON response body can be one of:  `session_already_available`: The user is already signed in. `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `security_identity_mismatch`: The requested `?return_to` address is not allowed to be used. Adjust this in the configuration! `browser_location_change_required`: Usually sent when an AJAX request indicates that the browser needs to open a specific URL. Most likely used in Social Sign In flows.  More information can be found at [Ory Kratos User Login and User Registration Documentation](https://www.ory.sh/docs/next/kratos/self-service/flows/user-login-user-registration).
 
 ### Examples
 
@@ -1914,10 +2147,10 @@ Use this endpoint to complete a registration flow by sending an identity's trait
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 flow = 'flow_example' # String | The Registration Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/registration?flow=abcde`).
 opts = {
-  submit_self_service_registration_flow_body: OryKratosClient::SubmitSelfServiceRegistrationFlowWithOidcMethodBody.new({method: 'method_example', traits: 'traits_example'}) # SubmitSelfServiceRegistrationFlowBody | 
+  submit_self_service_registration_flow_body: OryKratosClient::SubmitSelfServiceRegistrationFlowWithOidcMethodBody.new({method: 'method_example', provider: 'provider_example'}) # SubmitSelfServiceRegistrationFlowBody | 
 }
 
 begin
@@ -1925,7 +2158,7 @@ begin
   result = api_instance.submit_self_service_registration_flow(flow, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_registration_flow: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_registration_flow: #{e}"
 end
 ```
 
@@ -1943,7 +2176,7 @@ begin
   p headers # => { ... }
   p data # => <SuccessfulSelfServiceRegistrationWithoutBrowser>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_registration_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_registration_flow_with_http_info: #{e}"
 end
 ```
 
@@ -1970,11 +2203,11 @@ No authorization required
 
 ## submit_self_service_settings_flow
 
-> <SuccessfulSelfServiceSettingsWithoutBrowser> submit_self_service_settings_flow(flow, opts)
+> <SelfServiceSettingsFlow> submit_self_service_settings_flow(flow, opts)
 
 Complete Settings Flow
 
-Use this endpoint to complete a settings flow by sending an identity's updated password. This endpoint behaves differently for API and browser flows.  API-initiated flows expect `application/json` to be sent in the body and respond with HTTP 200 and an application/json body with the session token on success; HTTP 302 redirect to a fresh settings flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors. HTTP 401 when the endpoint is called without a valid session token. HTTP 403 when `selfservice.flows.settings.privileged_session_max_age` was reached. Implies that the user needs to re-authenticate.  Browser flows without HTTP Header `Accept` or with `Accept: text/*` respond with a HTTP 302 redirect to the post/after settings URL or the `return_to` value if it was set and if the flow succeeded; a HTTP 302 redirect to the Settings UI URL with the flow ID containing the validation errors otherwise. a HTTP 302 redirect to the login endpoint when `selfservice.flows.settings.privileged_session_max_age` was reached.  Browser flows with HTTP Header `Accept: application/json` respond with HTTP 200 and a application/json body with the signed in identity and a `Set-Cookie` header on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 403 when the page is accessed without a session cookie. HTTP 400 on form validation errors.  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
+Use this endpoint to complete a settings flow by sending an identity's updated password. This endpoint behaves differently for API and browser flows.  API-initiated flows expect `application/json` to be sent in the body and respond with HTTP 200 and an application/json body with the session token on success; HTTP 302 redirect to a fresh settings flow if the original flow expired with the appropriate error messages set; HTTP 400 on form validation errors. HTTP 401 when the endpoint is called without a valid session token. HTTP 403 when `selfservice.flows.settings.privileged_session_max_age` was reached or the session's AAL is too low. Implies that the user needs to re-authenticate.  Browser flows without HTTP Header `Accept` or with `Accept: text/*` respond with a HTTP 302 redirect to the post/after settings URL or the `return_to` value if it was set and if the flow succeeded; a HTTP 302 redirect to the Settings UI URL with the flow ID containing the validation errors otherwise. a HTTP 302 redirect to the login endpoint when `selfservice.flows.settings.privileged_session_max_age` was reached or the session's AAL is too low.  Browser flows with HTTP Header `Accept: application/json` respond with HTTP 200 and a application/json body with the signed in identity and a `Set-Cookie` header on success; HTTP 302 redirect to a fresh login flow if the original flow expired with the appropriate error messages set; HTTP 401 when the endpoint is called without a valid session cookie. HTTP 403 when the page is accessed without a session cookie or the session's AAL is too low. HTTP 400 on form validation errors.  Depending on your configuration this endpoint might return a 403 error if the session has a lower Authenticator Assurance Level (AAL) than is possible for the identity. This can happen if the identity has password + webauthn credentials (which would result in AAL2) but the session has only AAL1. If this error occurs, ask the user to sign in with the second factor (happens automatically for server-side browser flows) or change the configuration.  If this endpoint is called with a `Accept: application/json` HTTP header, the response contains the flow without a redirect. In the case of an error, the `error.id` of the JSON response body can be one of:  `session_refresh_required`: The identity requested to change something that needs a privileged session. Redirect the identity to the login init endpoint with query parameters `?refresh=true&return_to=<the-current-browser-url>`, or initiate a refresh login flow otherwise. `security_csrf_violation`: Unable to fetch the flow because a CSRF violation occurred. `session_inactive`: No Ory Session was found - sign in a user first. `security_identity_mismatch`: The flow was interrupted with `session_refresh_required` but apparently some other identity logged in instead. `security_identity_mismatch`: The requested `?return_to` address is not allowed to be used. Adjust this in the configuration! `browser_location_change_required`: Usually sent when an AJAX request indicates that the browser needs to open a specific URL. Most likely used in Social Sign In flows.  More information can be found at [Ory Kratos User Settings & Profile Management Documentation](../self-service/flows/user-settings).
 
 ### Examples
 
@@ -1982,7 +2215,7 @@ Use this endpoint to complete a settings flow by sending an identity's updated p
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 flow = 'flow_example' # String | The Settings Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/settings?flow=abcde`).
 opts = {
   x_session_token: 'x_session_token_example', # String | The Session Token of the Identity performing the settings flow.
@@ -1994,7 +2227,7 @@ begin
   result = api_instance.submit_self_service_settings_flow(flow, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_settings_flow: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_settings_flow: #{e}"
 end
 ```
 
@@ -2002,7 +2235,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SuccessfulSelfServiceSettingsWithoutBrowser>, Integer, Hash)> submit_self_service_settings_flow_with_http_info(flow, opts)
+> <Array(<SelfServiceSettingsFlow>, Integer, Hash)> submit_self_service_settings_flow_with_http_info(flow, opts)
 
 ```ruby
 begin
@@ -2010,9 +2243,9 @@ begin
   data, status_code, headers = api_instance.submit_self_service_settings_flow_with_http_info(flow, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <SuccessfulSelfServiceSettingsWithoutBrowser>
+  p data # => <SelfServiceSettingsFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_settings_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_settings_flow_with_http_info: #{e}"
 end
 ```
 
@@ -2026,7 +2259,7 @@ end
 
 ### Return type
 
-[**SuccessfulSelfServiceSettingsWithoutBrowser**](SuccessfulSelfServiceSettingsWithoutBrowser.md)
+[**SelfServiceSettingsFlow**](SelfServiceSettingsFlow.md)
 
 ### Authorization
 
@@ -2052,7 +2285,7 @@ Use this endpoint to complete a verification flow. This endpoint behaves differe
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 flow = 'flow_example' # String | The Verification Flow ID  The value for this parameter comes from `flow` URL Query parameter sent to your application (e.g. `/verification?flow=abcde`).
 opts = {
   token: 'token_example', # String | Verification Token  The verification token which completes the verification request. If the token is invalid (e.g. expired) an error will be shown to the end-user.  This parameter is usually set in a link and not used by any direct API call.
@@ -2064,7 +2297,7 @@ begin
   result = api_instance.submit_self_service_verification_flow(flow, opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_verification_flow: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_verification_flow: #{e}"
 end
 ```
 
@@ -2082,7 +2315,7 @@ begin
   p headers # => { ... }
   p data # => <SelfServiceVerificationFlow>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->submit_self_service_verification_flow_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->submit_self_service_verification_flow_with_http_info: #{e}"
 end
 ```
 
@@ -2114,7 +2347,7 @@ No authorization required
 
 Check Who the Current HTTP Session Belongs To
 
-Uses the HTTP Headers in the GET request to determine (e.g. by using checking the cookies) who is authenticated. Returns a session object in the body or 401 if the credentials are invalid or no credentials were sent. Additionally when the request it successful it adds the user ID to the 'X-Kratos-Authenticated-Identity-Id' header in the response.  If you call this endpoint from a server-side application, you must forward the HTTP Cookie Header to this endpoint:  ```js pseudo-code example router.get('/protected-endpoint', async function (req, res) { const session = await client.toSession(undefined, req.header('cookie'))  console.log(session) }) ```  When calling this endpoint from a non-browser application (e.g. mobile app) you must include the session token:  ```js pseudo-code example ... const session = await client.toSession(\"the-session-token\")  console.log(session) ```  This endpoint is useful for:  AJAX calls. Remember to send credentials and set up CORS correctly! Reverse proxies and API Gateways Server-side calls - use the `X-Session-Token` header!  This endpoint authenticates users by checking  if the `Cookie` HTTP header was set containing an Ory Kratos Session Cookie; if the `Authorization: bearer <ory-session-token>` HTTP header was set with a valid Ory Kratos Session Token; if the `X-Session-Token` HTTP header was set with a valid Ory Kratos Session Token.  If none of these headers are set or the cooke or token are invalid, the endpoint returns a HTTP 401 status code.
+Uses the HTTP Headers in the GET request to determine (e.g. by using checking the cookies) who is authenticated. Returns a session object in the body or 401 if the credentials are invalid or no credentials were sent. Additionally when the request it successful it adds the user ID to the 'X-Kratos-Authenticated-Identity-Id' header in the response.  If you call this endpoint from a server-side application, you must forward the HTTP Cookie Header to this endpoint:  ```js pseudo-code example router.get('/protected-endpoint', async function (req, res) { const session = await client.toSession(undefined, req.header('cookie'))  console.log(session) }) ```  When calling this endpoint from a non-browser application (e.g. mobile app) you must include the session token:  ```js pseudo-code example ... const session = await client.toSession(\"the-session-token\")  console.log(session) ```  Depending on your configuration this endpoint might return a 403 status code if the session has a lower Authenticator Assurance Level (AAL) than is possible for the identity. This can happen if the identity has password + webauthn credentials (which would result in AAL2) but the session has only AAL1. If this error occurs, ask the user to sign in with the second factor or change the configuration.  This endpoint is useful for:  AJAX calls. Remember to send credentials and set up CORS correctly! Reverse proxies and API Gateways Server-side calls - use the `X-Session-Token` header!  This endpoint authenticates users by checking  if the `Cookie` HTTP header was set containing an Ory Kratos Session Cookie; if the `Authorization: bearer <ory-session-token>` HTTP header was set with a valid Ory Kratos Session Token; if the `X-Session-Token` HTTP header was set with a valid Ory Kratos Session Token.  If none of these headers are set or the cooke or token are invalid, the endpoint returns a HTTP 401 status code.  As explained above, this request may fail due to several reasons. The `error.id` can be one of:  `session_inactive`: No active session was found in the request (e.g. no Ory Session Cookie / Ory Session Token). `session_aal2_required`: An active session was found but it does not fulfil the Authenticator Assurance Level, implying that the session must (e.g.) authenticate the second factor.
 
 ### Examples
 
@@ -2122,7 +2355,7 @@ Uses the HTTP Headers in the GET request to determine (e.g. by using checking th
 require 'time'
 require 'ory-kratos-client'
 
-api_instance = OryKratosClient::V0alpha1Api.new
+api_instance = OryKratosClient::V0alpha2Api.new
 opts = {
   x_session_token: 'MP2YWEMeM8MxjkGKpH4dqOQ4Q4DlSPaj', # String | Set the Session Token when calling from non-browser clients. A session token has a format of `MP2YWEMeM8MxjkGKpH4dqOQ4Q4DlSPaj`.
   cookie: 'ory_kratos_session=a19iOVAbdzdgl70Rq1QZmrKmcjDtdsviCTZx7m9a9yHIUS8Wa9T7hvqyGTsLHi6Qifn2WUfpAKx9DWp0SJGleIn9vh2YF4A16id93kXFTgIgmwIOvbVAScyrx7yVl6bPZnCx27ec4WQDtaTewC1CpgudeDV2jQQnSaCP6ny3xa8qLH-QUgYqdQuoA_LF1phxgRCUfIrCLQOkolX5nv3ze_f==' # String | Set the Cookie Header. This is especially useful when calling this endpoint from a server-side application. In that scenario you must include the HTTP Cookie Header which originally was included in the request to your server. An example of a session in the HTTP Cookie Header is: `ory_kratos_session=a19iOVAbdzdgl70Rq1QZmrKmcjDtdsviCTZx7m9a9yHIUS8Wa9T7hvqyGTsLHi6Qifn2WUfpAKx9DWp0SJGleIn9vh2YF4A16id93kXFTgIgmwIOvbVAScyrx7yVl6bPZnCx27ec4WQDtaTewC1CpgudeDV2jQQnSaCP6ny3xa8qLH-QUgYqdQuoA_LF1phxgRCUfIrCLQOkolX5nv3ze_f==`.  It is ok if more than one cookie are included here as all other cookies will be ignored.
@@ -2133,7 +2366,7 @@ begin
   result = api_instance.to_session(opts)
   p result
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->to_session: #{e}"
+  puts "Error when calling V0alpha2Api->to_session: #{e}"
 end
 ```
 
@@ -2151,7 +2384,7 @@ begin
   p headers # => { ... }
   p data # => <Session>
 rescue OryKratosClient::ApiError => e
-  puts "Error when calling V0alpha1Api->to_session_with_http_info: #{e}"
+  puts "Error when calling V0alpha2Api->to_session_with_http_info: #{e}"
 end
 ```
 
