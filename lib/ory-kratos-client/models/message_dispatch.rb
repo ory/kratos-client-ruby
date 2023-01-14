@@ -14,17 +14,46 @@ require 'date'
 require 'time'
 
 module OryKratosClient
-  class FlowError
+  # MessageDispatch represents an attempt of sending a courier message It contains the status of the attempt (failed or successful) and the error if any occured
+  class MessageDispatch
     # CreatedAt is a helper struct field for gobuffalo.pop.
     attr_accessor :created_at
 
     attr_accessor :error
 
-    # ID of the error container.
+    # The ID of this message dispatch
     attr_accessor :id
+
+    # The ID of the message being dispatched
+    attr_accessor :message_id
+
+    # The status of this dispatch Either \"failed\" or \"success\" failed CourierMessageDispatchStatusFailed success CourierMessageDispatchStatusSuccess
+    attr_accessor :status
 
     # UpdatedAt is a helper struct field for gobuffalo.pop.
     attr_accessor :updated_at
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -32,6 +61,8 @@ module OryKratosClient
         :'created_at' => :'created_at',
         :'error' => :'error',
         :'id' => :'id',
+        :'message_id' => :'message_id',
+        :'status' => :'status',
         :'updated_at' => :'updated_at'
       }
     end
@@ -47,6 +78,8 @@ module OryKratosClient
         :'created_at' => :'Time',
         :'error' => :'Object',
         :'id' => :'String',
+        :'message_id' => :'String',
+        :'status' => :'String',
         :'updated_at' => :'Time'
       }
     end
@@ -61,13 +94,13 @@ module OryKratosClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `OryKratosClient::FlowError` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `OryKratosClient::MessageDispatch` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `OryKratosClient::FlowError`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `OryKratosClient::MessageDispatch`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
@@ -84,6 +117,14 @@ module OryKratosClient
         self.id = attributes[:'id']
       end
 
+      if attributes.key?(:'message_id')
+        self.message_id = attributes[:'message_id']
+      end
+
+      if attributes.key?(:'status')
+        self.status = attributes[:'status']
+      end
+
       if attributes.key?(:'updated_at')
         self.updated_at = attributes[:'updated_at']
       end
@@ -93,8 +134,24 @@ module OryKratosClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @created_at.nil?
+        invalid_properties.push('invalid value for "created_at", created_at cannot be nil.')
+      end
+
       if @id.nil?
         invalid_properties.push('invalid value for "id", id cannot be nil.')
+      end
+
+      if @message_id.nil?
+        invalid_properties.push('invalid value for "message_id", message_id cannot be nil.')
+      end
+
+      if @status.nil?
+        invalid_properties.push('invalid value for "status", status cannot be nil.')
+      end
+
+      if @updated_at.nil?
+        invalid_properties.push('invalid value for "updated_at", updated_at cannot be nil.')
       end
 
       invalid_properties
@@ -103,8 +160,24 @@ module OryKratosClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @created_at.nil?
       return false if @id.nil?
+      return false if @message_id.nil?
+      return false if @status.nil?
+      status_validator = EnumAttributeValidator.new('String', ["failed", "success"])
+      return false unless status_validator.valid?(@status)
+      return false if @updated_at.nil?
       true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      validator = EnumAttributeValidator.new('String', ["failed", "success"])
+      unless validator.valid?(status)
+        fail ArgumentError, "invalid value for \"status\", must be one of #{validator.allowable_values}."
+      end
+      @status = status
     end
 
     # Checks equality by comparing each attribute.
@@ -115,6 +188,8 @@ module OryKratosClient
           created_at == o.created_at &&
           error == o.error &&
           id == o.id &&
+          message_id == o.message_id &&
+          status == o.status &&
           updated_at == o.updated_at
     end
 
@@ -127,7 +202,7 @@ module OryKratosClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [created_at, error, id, updated_at].hash
+      [created_at, error, id, message_id, status, updated_at].hash
     end
 
     # Builds the object from hash
