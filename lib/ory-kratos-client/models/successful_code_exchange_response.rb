@@ -14,27 +14,18 @@ require 'date'
 require 'time'
 
 module OryKratosClient
-  class RecoveryIdentityAddress
-    # CreatedAt is a helper struct field for gobuffalo.pop.
-    attr_accessor :created_at
+  # The Response for Registration Flows via API
+  class SuccessfulCodeExchangeResponse
+    attr_accessor :session
 
-    attr_accessor :id
-
-    # UpdatedAt is a helper struct field for gobuffalo.pop.
-    attr_accessor :updated_at
-
-    attr_accessor :value
-
-    attr_accessor :via
+    # The Session Token  A session token is equivalent to a session cookie, but it can be sent in the HTTP Authorization Header:  Authorization: bearer ${session-token}  The session token is only issued for API flows, not for Browser flows!
+    attr_accessor :session_token
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'created_at' => :'created_at',
-        :'id' => :'id',
-        :'updated_at' => :'updated_at',
-        :'value' => :'value',
-        :'via' => :'via'
+        :'session' => :'session',
+        :'session_token' => :'session_token'
       }
     end
 
@@ -46,11 +37,8 @@ module OryKratosClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'created_at' => :'Time',
-        :'id' => :'String',
-        :'updated_at' => :'Time',
-        :'value' => :'String',
-        :'via' => :'String'
+        :'session' => :'Session',
+        :'session_token' => :'String'
       }
     end
 
@@ -64,35 +52,23 @@ module OryKratosClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `OryKratosClient::RecoveryIdentityAddress` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `OryKratosClient::SuccessfulCodeExchangeResponse` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `OryKratosClient::RecoveryIdentityAddress`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `OryKratosClient::SuccessfulCodeExchangeResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
+      if attributes.key?(:'session')
+        self.session = attributes[:'session']
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.key?(:'updated_at')
-        self.updated_at = attributes[:'updated_at']
-      end
-
-      if attributes.key?(:'value')
-        self.value = attributes[:'value']
-      end
-
-      if attributes.key?(:'via')
-        self.via = attributes[:'via']
+      if attributes.key?(:'session_token')
+        self.session_token = attributes[:'session_token']
       end
     end
 
@@ -100,16 +76,8 @@ module OryKratosClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @id.nil?
-        invalid_properties.push('invalid value for "id", id cannot be nil.')
-      end
-
-      if @value.nil?
-        invalid_properties.push('invalid value for "value", value cannot be nil.')
-      end
-
-      if @via.nil?
-        invalid_properties.push('invalid value for "via", via cannot be nil.')
+      if @session.nil?
+        invalid_properties.push('invalid value for "session", session cannot be nil.')
       end
 
       invalid_properties
@@ -118,9 +86,7 @@ module OryKratosClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @id.nil?
-      return false if @value.nil?
-      return false if @via.nil?
+      return false if @session.nil?
       true
     end
 
@@ -129,11 +95,8 @@ module OryKratosClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          created_at == o.created_at &&
-          id == o.id &&
-          updated_at == o.updated_at &&
-          value == o.value &&
-          via == o.via
+          session == o.session &&
+          session_token == o.session_token
     end
 
     # @see the `==` method
@@ -145,7 +108,7 @@ module OryKratosClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [created_at, id, updated_at, value, via].hash
+      [session, session_token].hash
     end
 
     # Builds the object from hash
