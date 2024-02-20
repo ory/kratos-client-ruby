@@ -1,4 +1,4 @@
-# OryKratosClient::IdentityCredentialsType
+# OryKratosClient::LoginFlowState
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'ory-kratos-client'
 
-instance = OryKratosClient::IdentityCredentialsType.new()
+instance = OryKratosClient::LoginFlowState.new()
 ```
 
